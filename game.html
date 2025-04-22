@@ -1,0 +1,247 @@
+<!DOCTYPE html> 
+
+<html lang="en"> 
+
+<head> 
+
+  <meta charset="UTF-8" /> 
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+
+  <title>Boredom Buster</title> 
+
+  <style> 
+
+    body { 
+
+      font-family: 'Segoe UI', sans-serif; 
+
+      background-color: #1a1a2e; 
+
+      color: #fff; 
+
+      display: flex; 
+
+      flex-direction: column; 
+
+      align-items: center; 
+
+      padding: 2rem; 
+
+    } 
+
+ 
+
+    h1 { 
+
+      font-size: 2.5rem; 
+
+      color: #00f0ff; 
+
+      margin-bottom: 1rem; 
+
+    } 
+
+ 
+
+    form { 
+
+      background-color: #16213e; 
+
+      padding: 2rem; 
+
+      border-radius: 12px; 
+
+      display: flex; 
+
+      flex-direction: column; 
+
+      gap: 1rem; 
+
+      width: 100%; 
+
+      max-width: 400px; 
+
+    } 
+
+ 
+
+    label { 
+
+      font-weight: bold; 
+
+    } 
+
+ 
+
+    input, select, button { 
+
+      padding: 0.7rem; 
+
+      border-radius: 8px; 
+
+      border: none; 
+
+      font-size: 1rem; 
+
+      width: 100%; 
+
+    } 
+
+ 
+
+    button { 
+
+      background-color: #00f0ff; 
+
+      color: #000; 
+
+      cursor: pointer; 
+
+      transition: background-color 0.3s; 
+
+    } 
+
+ 
+
+    button:hover { 
+
+      background-color: #03c4c4; 
+
+    } 
+
+ 
+
+    #idea-output { 
+
+      margin-top: 2rem; 
+
+      font-size: 1.2rem; 
+
+      color: #0ef; 
+
+      text-align: center; 
+
+    } 
+
+  </style> 
+
+</head> 
+
+<body> 
+
+  <h1>Boredom Buster</h1> 
+
+  <form id="ideaForm"> 
+
+    <label for="people">How many people?</label> 
+
+    <input type="number" id="people" min="1" required /> 
+
+ 
+
+    <label for="location">Where are you?</label> 
+
+    <input type="text" id="location" placeholder="e.g., home, park, city" required /> 
+
+ 
+
+    <label for="time">What time is it?</label> 
+
+    <input type="text" id="time" placeholder="e.g., evening, 2pm, night" required /> 
+
+ 
+
+    <label for="budget">Budget ($)?</label> 
+
+    <input type="number" id="budget" min="0" required /> 
+
+ 
+
+    <button type="submit">Get an Idea!</button> 
+
+  </form> 
+
+ 
+
+  <div id="idea-output"></div> 
+
+ 
+
+  <script> 
+
+    const ideas = [ 
+
+      "Go for a walk around the neighborhood", 
+
+      "Host a spontaneous picnic", 
+
+      "Play board games together", 
+
+      "Do a home cooking challenge", 
+
+      "Try a YouTube dance workout", 
+
+      "Make a short film with your phones", 
+
+      "Do a photo scavenger hunt", 
+
+      "Have a karaoke night", 
+
+      "Go stargazing with blankets", 
+
+      "Visit a local museum or free exhibit" 
+
+    ]; 
+
+ 
+
+    document.getElementById("ideaForm").addEventListener("submit", function(event) { 
+
+      event.preventDefault(); 
+
+ 
+
+      const people = document.getElementById("people").value; 
+
+      const location = document.getElementById("location").value.toLowerCase(); 
+
+      const time = document.getElementById("time").value.toLowerCase(); 
+
+      const budget = parseFloat(document.getElementById("budget").value); 
+
+ 
+
+      let idea = ideas[Math.floor(Math.random() * ideas.length)]; 
+
+ 
+
+      if (budget === 0) { 
+
+        idea = "Have a no-spend game night at home"; 
+
+      } else if (location.includes("park")) { 
+
+        idea = "Play frisbee or soccer at the park"; 
+
+      } else if (time.includes("night")) { 
+
+        idea = "Have a backyard stargazing or ghost story night"; 
+
+      } else if (budget > 20 && people > 2) { 
+
+        idea = "Go try a new food place or dessert spot nearby"; 
+
+      } 
+
+ 
+
+      document.getElementById("idea-output").textContent = idea; 
+
+    }); 
+
+  </script> 
+
+</body> 
+
+</html> 

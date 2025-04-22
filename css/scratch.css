@@ -1,0 +1,281 @@
+body { 
+
+    background:#1a1a1a; 
+
+    color: #fff; 
+
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif 
+
+  } 
+
+   
+
+h1{ 
+
+    color:#fff; 
+
+    text-align: center; 
+
+    font-size:50px; 
+
+} 
+
+ 
+
+h3{ 
+
+    color:#fff; 
+
+    text-align: center; 
+
+} 
+
+ 
+
+nav a{ 
+
+    color:whitesmoke; 
+
+    text-decoration: none; 
+
+    gap: 24px; 
+
+    align-items: center; 
+
+} 
+
+ 
+
+.navbar { 
+
+    position: sticky; 
+
+    top: 0; 
+
+    z-index: 1000; 
+
+    background: #1a1a1a; 
+
+    display: flex; 
+
+    justify-content: center; 
+
+    align-items: center; 
+
+    padding: 0.5rem 2rem; 
+
+ 
+
+  } 
+
+   
+
+  .nav-links { 
+
+    list-style: none; 
+
+    display: flex; 
+
+    gap: 2rem; 
+
+  } 
+
+   
+
+  .nav-links li a { 
+
+    text-decoration: none; 
+
+    font-size: 20px; 
+
+    color: #fff; 
+
+    transition: color 0.3s; 
+
+  } 
+
+   
+
+  .nav-links li a:hover { 
+
+    color: #0ef; 
+
+  } 
+
+ 
+
+  h2{ 
+
+    color:#0ef; 
+
+    text-align: center; 
+
+    padding-top: 2.5rem; 
+
+    font-size: 40px; 
+
+  } 
+
+ 
+
+    .grid { 
+
+    display: grid; 
+
+    grid-template-columns: repeat(3, 1fr); 
+
+    gap: 1rem; 
+
+    max-width: 1000px; 
+
+    margin: auto; 
+
+    padding: 2rem; 
+
+  } 
+
+   
+
+  .grid img { 
+
+    width: 100%; 
+
+    height: auto; 
+
+    border-radius: 8px; 
+
+    object-fit: cover; 
+
+    box-shadow: 0 0 10px rgba(0,0,0,0.3); 
+
+  } 
+
+ 
+
+  @media (max-width: 768px) { 
+
+    .grid { 
+
+      grid-template-columns: repeat(2, 1fr); 
+
+    } 
+
+  } 
+
+   
+
+  @media (max-width: 500px) { 
+
+    .grid { 
+
+      grid-template-columns: 1fr; 
+
+    } 
+
+  } 
+
+ 
+
+  .video-wrapper { 
+
+    position: relative; 
+
+    padding-bottom: 56.25%; 
+
+    height: 0; 
+
+    overflow: hidden; 
+
+    max-width: 100%; 
+
+  } 
+
+   
+
+  .video-wrapper iframe { 
+
+    position: absolute; 
+
+    top: 0; 
+
+    left: 0; 
+
+    width: 75%; 
+
+    height: 100%; 
+
+    padding-left: 14%; 
+
+    padding-right: 20%; 
+
+  } 
+
+ 
+
+  .spacer{ 
+
+    padding:2rem; 
+
+  } 
+
+ 
+
+  .about-photo{ 
+
+    width: 40%; 
+
+    height:auto; 
+
+    max-width: 100%; 
+
+    display: block; 
+
+    margin: 20px auto 
+
+  } 
+
+ 
+
+  p{ 
+
+    padding-left: 25%; 
+
+    padding-right: 25%; 
+
+    font-size: 20px; 
+
+    line-height: 1.4; 
+
+  } 
+
+ 
+
+.about-list{ 
+
+    padding-left: 25%; 
+
+    padding-right: 25%; 
+
+    font-size: 20px; 
+
+    line-height: 1.4; 
+
+} 
+
+ 
+
+.link{ 
+
+    color:#0ef; 
+
+} 
+
+ 
+
+.tab{ 
+
+    display: block; 
+
+    margin: 20px auto; 
+
+} 
